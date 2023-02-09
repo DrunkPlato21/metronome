@@ -25,11 +25,26 @@ editableText.addEventListener("blur", function() {
   if (bpmInput >= 40 && bpmInput <= 218) {
     // Save the changes made by the user
     bpm = bpmInput;
+    bpmSlider.value = bpm
   } else {
     // Reset the value if the input is invalid
     editableText.textContent = bpm;
   }
 
+  if(isPlaying){       
+
+    stopMetronome()
+    startMetronome()
+    
+}
+
+});
+
+editableText.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    //unfocuses the element
+    document.activeElement.blur();
+  }
 });
 
 
