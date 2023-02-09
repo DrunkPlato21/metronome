@@ -1,0 +1,52 @@
+.metronome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+
+  .bpm-display {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .bpm-value {
+    color: #2980b9;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .start-stop {
+    background-color: #2980b9;
+    color: #fff;
+  }
+
+  .decrease-bpm,
+  .increase-bpm {
+    background-color: #fff;
+    color: #2980b9;
+    border: 2px solid #2980b9;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
