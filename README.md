@@ -1,6 +1,6 @@
 # Javascript Metronome
 
-A basic metronome that I made using javascript html and css. I was unsatisfied with the google metronomes lack of "click to edit" feature, so I made my own that included it. 
+A basic metronome that I made using javascript html and css. I was unsatisfied with the google metronome's lack of "click to edit" feature, so I made my own that included it. 
 
 # Features
 
