@@ -5,11 +5,23 @@ let intervalId;
 let toggleButton = document.querySelector('.start-stop')
 let decreaseButton = document.querySelector('.decrease-bpm')
 let increaseButton = document.querySelector('.increase-bpm')
-let light = document.querySelector('.light')
 
 toggleButton.addEventListener('click', toggleMetronome)
 decreaseButton.addEventListener('click', decreaseBPM)
 increaseButton.addEventListener('click', increaseBPM)
+
+let light = document.getElementById("light");
+let isLightOn = false;
+
+function toggleLight() {
+  if (isLightOn) {
+    light.style.backgroundColor = "red";
+    isLightOn = false;
+  } else {
+    light.style.backgroundColor = "blue";
+    isLightOn = true;
+  }
+}
 
 
 function toggleMetronome() {
@@ -70,6 +82,7 @@ function toggleMetronome() {
   }
   function playSound() {
     const sound = new Audio("audio/click.mp3");
+    toggleLight();
     sound.play();
   }
 

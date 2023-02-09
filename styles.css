@@ -59,3 +59,11 @@
     transform: scale(1.05);
   }
 
+  #light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
