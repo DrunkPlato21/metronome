@@ -47,6 +47,12 @@ editableText.addEventListener("keydown", function(e) {
   }
 });
 
+document.addEventListener("keydown", function(e) {
+  if (e.key === " ") {
+    toggleMetronome();
+  }
+});
+
 
 let bpmSlider = document.getElementById("bpm-slider");
 bpmSlider.value = bpm;
@@ -74,7 +80,7 @@ function toggleLight() {
     light.style.backgroundColor = "red";
     isLightOn = false;
   } else {
-    light.style.backgroundColor = "blue";
+    light.style.backgroundColor = "#2980b9";
     isLightOn = true;
   }
 }
