@@ -11,6 +11,6 @@ A basic metronome that I made using javascript html and css. I was unsatisfied w
     - plus + and minus - buttons
     - click to edit and type in bpm manually (resets if invalid input)
 
-# sources
+# Credits
 
 electric click sound: https://pixabay.com/sound-effects/search/metronome/?manual_search=1&order=None
