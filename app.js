@@ -5,6 +5,7 @@ let intervalId;
 let toggleButton = document.querySelector('.start-stop')
 let decreaseButton = document.querySelector('.decrease-bpm')
 let increaseButton = document.querySelector('.increase-bpm')
+let light = document.querySelector('.light')
 
 toggleButton.addEventListener('click', toggleMetronome)
 decreaseButton.addEventListener('click', decreaseBPM)
@@ -22,8 +23,10 @@ function toggleMetronome() {
   }
 
   function startMetronome() {
+
     isPlaying = true;
-    intervalId = setInterval(playSound, 60000 / bpm);
+    intervalId = setInterval(playSound, 60000 / bpm);    
+
   }
 
   function stopMetronome() {
@@ -37,6 +40,7 @@ function toggleMetronome() {
 
         bpm += 1;
         updateBPMDisplay();
+
         if(isPlaying){       
 
             stopMetronome()
@@ -64,9 +68,7 @@ function toggleMetronome() {
     }
 
   }
-
   function playSound() {
-    console.log('test')
     const sound = new Audio("audio/click.mp3");
     sound.play();
   }
