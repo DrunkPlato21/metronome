@@ -6,6 +6,14 @@ let toggleButton = document.querySelector('.start-stop')
 let decreaseButton = document.querySelector('.decrease-bpm')
 let increaseButton = document.querySelector('.increase-bpm')
 
+let bpmSlider = document.getElementById("bpm-slider");
+bpmSlider.value = bpm;
+bpmSlider.addEventListener("input", function() {
+  bpm = Number(bpmSlider.value);
+  updateBPMDisplay();
+});
+
+
 toggleButton.addEventListener('click', toggleMetronome)
 decreaseButton.addEventListener('click', decreaseBPM)
 increaseButton.addEventListener('click', increaseBPM)
@@ -51,6 +59,8 @@ function toggleMetronome() {
     if(bpm < 200){
 
         bpm += 1;
+        bpmSlider.value = bpm;
+
         updateBPMDisplay();
 
         if(isPlaying){       
@@ -61,6 +71,7 @@ function toggleMetronome() {
         }
 
     }
+    console.log(bpm)
 
   }
 
@@ -69,7 +80,10 @@ function toggleMetronome() {
     if(bpm > 50){
 
         bpm -= 1;
+        bpmSlider.value = bpm;
+
         updateBPMDisplay();
+
 
         if(isPlaying){       
 

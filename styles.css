@@ -67,3 +67,8 @@
     display: inline-block;
     margin-bottom: 25px;
   }
+
+  #bpm-slider{
+    margin-top: 35px;
+    width: 100%
+  }
