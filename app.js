@@ -49,6 +49,7 @@ editableText.addEventListener("keydown", function(e) {
 
 document.addEventListener("keydown", function(e) {
   if (e.key === " ") {
+    document.activeElement.blur();
     toggleMetronome();
   }
 });
