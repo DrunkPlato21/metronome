@@ -6,6 +6,33 @@ let toggleButton = document.querySelector('.start-stop')
 let decreaseButton = document.querySelector('.decrease-bpm')
 let increaseButton = document.querySelector('.increase-bpm')
 
+const editableText = document.querySelector('.bpm-value')
+
+editableText.addEventListener("click", function(e) {
+
+  editableText.contentEditable = true;
+  editableText.focus()
+  
+});
+
+editableText.addEventListener("blur", function() {
+  
+  editableText.contentEditable = false;
+ 
+
+  // Validate the input
+  const bpmInput = Number(editableText.textContent);
+  if (bpmInput >= 40 && bpmInput <= 218) {
+    // Save the changes made by the user
+    bpm = bpmInput;
+  } else {
+    // Reset the value if the input is invalid
+    editableText.textContent = bpm;
+  }
+
+});
+
+
 let bpmSlider = document.getElementById("bpm-slider");
 bpmSlider.value = bpm;
 bpmSlider.addEventListener("input", function() {
@@ -62,7 +89,7 @@ function toggleMetronome() {
 
   function increaseBPM() {
 
-    if(bpm < 200){
+    if(bpm < 218){
 
         bpm += 1;
         bpmSlider.value = bpm;
@@ -83,7 +110,7 @@ function toggleMetronome() {
 
   function decreaseBPM() {
 
-    if(bpm > 50){
+    if(bpm > 40){
 
         bpm -= 1;
         bpmSlider.value = bpm;
