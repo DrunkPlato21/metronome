@@ -11,6 +11,12 @@ bpmSlider.value = bpm;
 bpmSlider.addEventListener("input", function() {
   bpm = Number(bpmSlider.value);
   updateBPMDisplay();
+  if(isPlaying){       
+
+    stopMetronome()
+    startMetronome()
+    
+}
 });
 
 
