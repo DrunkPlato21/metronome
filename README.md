@@ -4,7 +4,8 @@ A basic metronome that I made using javascript html and css. I was unsatisfied w
 
 # Features
 
-- visual feedback of bpm 
+- visual feedback of beat
+- volume control 
 - use spacebar to start/stop metronome
 - 3 methods of adjusting bpm
     - slider
