@@ -8,21 +8,41 @@
     <title>Metronome Javascript Project</title>
 </head>
 <body>
-    <div class="metronome">
-      <div id="light"></div>
 
+    <div class="metronome">
+
+      <div id="light"></div>
+      
         <div class="bpm-display">
           <span class="bpm-value" type="number">120</span> BPM
         </div>
+
+        <div class="bpm-controls">
+          <input type="range" id="bpm-slider" min="40" max="218" value="120">
+        </div>
+
         <div class="controls">
-          <button class="start-stop">Start/Stop</button>
+          
+          <button class="start-stop">Start/Stop </button>
+          
           <button class="decrease-bpm">-</button>
           <button class="increase-bpm">+</button>
-
+          
         </div>
-        <input type="range" id="bpm-slider" min="40" max="218" value="120">
+        <div class="volume-controls">
+          <input type="range" id="volume-control" min="0" max="100" value="100">
+          <img src="audio.png" alt="">
+        </div>
+
+
 
       </div>
+
+      
+
+
+
+
       
     <script src="app.js"></script>
 </body>

@@ -13,7 +13,7 @@
   .bpm-display {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .bpm-value {
@@ -70,10 +70,20 @@
     margin-bottom: 25px;
   }
 
-  #bpm-slider{
-    margin-top: 35px;
+  #bpm-slider{    
     width: 100%
+    
+  }
+  .bpm-controls{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: 10px;
   }
 
-  
-  
+
+  .volume-controls{
+    margin-top: 15px;
+  }
+

@@ -1,6 +1,7 @@
 let bpm = 120;
 let isPlaying = false;
 let intervalId;
+let volume = 0.5;
 
 let toggleButton = document.querySelector('.start-stop')
 let decreaseButton = document.querySelector('.decrease-bpm')
@@ -39,6 +40,9 @@ editableText.addEventListener("blur", function() {
 }
 
 });
+
+
+
 
 editableText.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
@@ -151,6 +155,7 @@ function toggleMetronome() {
   }
   function playSound() {
     const sound = new Audio("audio/click.mp3");
+    sound.volume = volume;
     toggleLight();
     sound.play();
   }
@@ -159,3 +164,18 @@ function toggleMetronome() {
     document.querySelector(".bpm-value").innerHTML = bpm;
   }
 
+
+let volumeSlider = document.getElementById("volume-control");
+volumeSlider.min = 0;
+volumeSlider.max = 1;
+volumeSlider.step = 0.01;
+volumeSlider.value = volume;
+
+volumeSlider.addEventListener("input", function() {
+
+
+  volume = Number(volumeSlider.value);
+  console.log(volume)
+
+
+});
