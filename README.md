@@ -2,6 +2,8 @@
 
 A basic metronome that I made using javascript html and css. I was unsatisfied with the google metronome's lack of "click to edit" feature, so I made my own that included it. 
 
+try it here: https://drunkplato21.github.io/metronome/
+
 # Features
 
 - visual feedback of beat
