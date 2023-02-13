@@ -1,89 +1,119 @@
 .metronome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: solid rgb(95, 95, 95) 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: solid rgb(95, 95, 95) 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 500px) {
+.metronome {
+  width: 70%;
+}
+}
+
+.bpm-display {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #2980b9;
+}
+
+.bpm-value {
+  color: #2980b9;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #2980b9;
+  color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.start-stop {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.start-stop.on {
+  background-color: red;
+}
+
+.decrease-bpm,
+.increase-bpm {
+  background-color: #fff;
+  color: #2980b9;
+  border: 2px solid #2980b9;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+#bpm-slider {    
+  width: 100%;
+}
+
+.bpm-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+.bpm-controls {
+  width: 90%;
   }
+}
 
-  .bpm-display {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 0px;
-  }
-
-  .bpm-value {
-    color: #2980b9;
-  }
-
-  .controls {
-    display: flex;
-    justify-content: center;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    border: none;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .start-stop {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-  }
-
-  .start-stop.on {
-    background-color: red;
-  }
-
-  .decrease-bpm,
-  .increase-bpm {
-    background-color: #fff;
-    color: #2980b9;
-    border: 2px solid #2980b9;
-  }
-
-
-  button:hover {
-    transform: scale(1.05);
-  }
-
-  #light {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    display: inline-block;
-    margin-bottom: 25px;
-  }
-
-  #bpm-slider{    
-    width: 100%
-    
-  }
-  .bpm-controls{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin-bottom: 20px;
-    margin-top: 10px;
-  }
-
-
-  .volume-controls{
+.volume-controls {
     margin-top: 15px;
-  }
+    display: flex;
+    align-items: center;
+}
 
+#volume-control {
+    width: 70%;
+    margin-left: 10px;
+}
+
+img {
+    height: 15px;
+    width: 15px;
+}
