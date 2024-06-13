@@ -14,7 +14,6 @@ try it here: https://drunkplato21.github.io/metronome/
     - plus + and minus - buttons
     - click to edit and type in bpm manually (resets if invalid input)
 
-    -test
 
 # Credits
 
