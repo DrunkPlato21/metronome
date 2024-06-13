@@ -14,6 +14,8 @@ try it here: https://drunkplato21.github.io/metronome/
     - plus + and minus - buttons
     - click to edit and type in bpm manually (resets if invalid input)
 
+    -test
+
 # Credits
 
 electric click sound: https://pixabay.com/sound-effects/search/metronome/?manual_search=1&order=None
